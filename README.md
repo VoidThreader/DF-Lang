@@ -3,6 +3,8 @@ A derivative of Brainfuck called "Dumbfuck".
 
 ## Table of Contents
 * [Installation](#installation)
+    * [Building on Windows](#building-on-windows)
+    * [Building on Unix-like systems](#building-on-unix-like-systems)
 * [Usage](#usage)
 * [Syntax](#syntax)
 * [Example Program](#example-program)
