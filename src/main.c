@@ -92,6 +92,7 @@ int main(int argc, char **argv) {
     fclose(fptr);
     fptr = NULL;
 
+    // The part that actually outputs something.
     for (size_t i = 0; i < read_size; i++) {
         unsigned char instruction = program[i];
         switch (instruction) {
