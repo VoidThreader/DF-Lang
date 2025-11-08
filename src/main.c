@@ -3,6 +3,7 @@
 #include <string.h>
 
 int main(int argc, char **argv) {
+    // The great wall of variables
     int debug = 0;
     long pos = 0;
     const char *ext = ".df";
@@ -15,6 +16,7 @@ int main(int argc, char **argv) {
     size_t file_size = 0;
     FILE *fptr = NULL;
 
+    // Wait, it's all file reading?
     if (argc < 2) {
         fprintf(stderr, "Error: Missing an input file.\n");
         return 1;
