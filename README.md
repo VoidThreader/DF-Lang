@@ -124,7 +124,7 @@ Dumbfuck uses an accumulator for its program.
 |     `.`     | Output current accumulator value (default char, number in debug)        |
 ```
 * Other characters are treated as comments.
-* The accumulator's stored value's output is its decimal value in the ascii table.
+* The accumulator's stored value's output is its decimal value in the [ASCII Table](https://www.ascii-code.com/).
 * If the debug flag is enabled, it outputs the accumulator's value as an integer.
 
 # Example Program
