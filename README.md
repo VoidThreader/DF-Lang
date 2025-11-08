@@ -1,2 +1,2 @@
 # DF-Lang
-Dumbfuck language.
+A derivative of Brainfuck called "Dumbfuck".
