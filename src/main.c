@@ -102,8 +102,8 @@ int main(int argc, char **argv) {
                 if (debug) printf("%u ", (unsigned)accumulator);
                 else putchar(accumulator);                
                 break;
-            case '+': accumulator += 1; break;
-            case '-': accumulator -= 1; break;
+            case '+': accumulator++; break;
+            case '-': accumulator--; break;
             case '*': accumulator *= accumulator; break;
             case '<': accumulator <<= 1; break;
             case '>': accumulator >>= 1; break;
