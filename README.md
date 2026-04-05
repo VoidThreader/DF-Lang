@@ -2,13 +2,19 @@
 A derivative of Brainfuck called "Dumbfuck".
 
 ## Table of Contents
-* [Installation](#installation)
-    * [Building on Windows](#building-on-windows)
-    * [Building on Unix-like systems](#building-on-unix-like-systems)
-* [Usage](#usage)
-* [Syntax](#syntax)
-* [Example Program](#example-program)
-* [LICENSE](#license)
+- [DF-Lang](#df-lang)
+  - [Table of Contents](#table-of-contents)
+- [Installation](#installation)
+  - [Building on Windows](#building-on-windows)
+    - [Install Build Essentials](#install-build-essentials)
+    - [Compiling the Source Code](#compiling-the-source-code)
+  - [Building on Unix-like systems](#building-on-unix-like-systems)
+    - [Installing a Compiler](#installing-a-compiler)
+    - [Compiling the Source Code](#compiling-the-source-code-1)
+- [Usage](#usage)
+- [Syntax](#syntax)
+- [Example Program](#example-program)
+- [LICENSE](#license)
 
 # Installation
 Compile the interpreter from source, mortal.
@@ -120,7 +126,6 @@ Dumbfuck uses an accumulator for its program.
 |     `*`     | Square the accumulator                                                  |
 |     `<`     | Left shift accumulator by 1                                             |
 |     `>`     | Right shift accumulator by 1                                            |
-|     `!`     | Reset accumulator to 0                                                  |
 |     `.`     | Output current accumulator value (default char, number in debug)        |
 ```
 * Other characters are treated as comments.
@@ -130,20 +135,7 @@ Dumbfuck uses an accumulator for its program.
 # Example Program
 Here is an example program that prints out "Hello, world!" in Dumbfuck:
 ```
-+<<<*++++++++.
-!+++++*<<+.
-+++++++.
-.
-+++.
-!+++*++<<.
-!+<<<<<.
-<<---------.
---------.
-+++.
-------.
---------.
-!+<<<<<+.
-!+<<<++.
++++<*<.++*+.*>..+++.-<-*>.*<.--<<-.<+<>.+++.<+*>.>*.*+*.+*+<.
 ```
 Run the program:
 ```bash
