@@ -3,6 +3,8 @@
 #include <string.h>
 #include <stdbool.h>
 
+#include "df-libs/tape.h"
+
 int main(int argc, char **argv) {
 	// The great wall of variables
 	bool debug = false; // default is false, determines if the output is numeric or characters.
@@ -82,12 +84,14 @@ int main(int argc, char **argv) {
 		goto free_program;
 	}
 
-	unsigned char accumulator = 0;
 	program[read_size] = '\0';
 
 	// The part that actually outputs something.
-	for (size_t i = 0; i < read_size; i++) {
-		unsigned char instruction = program[i];
+	size_t instruction_ptr = 0;
+	unsigned char accumulator = 0;
+	
+	while (instruction_ptr < read_size) {
+		unsigned char instruction = program[instruction_ptr];
 		switch (instruction) {
 			case '.':
 				if (debug) printf("%u ", (unsigned)accumulator);
@@ -100,8 +104,9 @@ int main(int argc, char **argv) {
 			case '>': accumulator >>= 1; break;
 			default: break;
 		}
-	}
 
+		instruction_ptr++;
+	}
 
 	free_program:
 	free(program);
