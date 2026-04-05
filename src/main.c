@@ -85,32 +85,24 @@ int main(int argc, char **argv) {
 	unsigned char accumulator = 0;
 	program[read_size] = '\0';
 
-	// The part that actually outputs something.
-	for (size_t i = 0; i < read_size; i++) {
-		unsigned char instruction = program[i];
-		switch (instruction) {
-			case '.':
-				if (debug) printf("%u ", (unsigned)accumulator);
-				else putchar(accumulator);
-				break;
-			case '+': accumulator += 1; break;
-			case '-': accumulator -= 1; break;
-			case '*': accumulator *= accumulator; break;
-			case '<': accumulator <<= 1; break;
-			case '>': accumulator >>= 1; break;
-			default: break;
-		}
-	}
-
-
-	free_program:
-	free(program);
-	program = NULL;
-
-	close_file:
-	fclose(file);
-	file = NULL;
-
-	exit_program:
-	exit(exit_code);
+    // The part that actually outputs something.
+    for (size_t i = 0; i < read_size; i++) {
+        unsigned char instruction = program[i];
+        switch (instruction) {
+            case '.':
+                if (debug) printf("%u ", (unsigned)accumulator);
+                else putchar(accumulator);                
+                break;
+            case '+': accumulator++; break;
+            case '-': accumulator--; break;
+            case '*': accumulator *= accumulator; break;
+            case '<': accumulator <<= 1; break;
+            case '>': accumulator >>= 1; break;
+            case '!': accumulator = 0; break;
+            default: break;
+        }
+    }
+    free(program);
+    program = NULL;
+    return 0;
 }
